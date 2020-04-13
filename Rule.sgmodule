@@ -1,0 +1,17 @@
+#!name=Rule
+#!desc=分流规则和去广告
+#!system=ios
+[RULE]
+#今日热榜
+DOMAIN-SUFFIX,tophub.today,NO ING
+
+# ZhiHu
+USER-AGENT,AVOS*,REJECT-TINYGIF
+URL-REGEX,https://www.zhihu.com/api/v4/mcn/,REJECT-TINYGIF
+URL-REGEX,https://api.zhihu.com/(ab|adx|xen|drama|fringe|zst|commercial|ad-style-service|market/popover|search/(top|tab|preset)|.*(guide|recommendations|extended|featured-comment-ad)),REJECT-TINYGIF
+AND,((USER-AGENT,osee2*), (NOT,((DOMAIN-SUFFIX,zhihu.com))), (NOT,((DOMAIN-SUFFIX,zhimg.com)))),REJECT-TINYGIF
+
+# BiliBili
+URL-REGEX,https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)),REJECT-TINYGIF
+URL-REGEX,https://api.bilibili.com/x/v2/dm/advert,REJECT-TINYGIF
+AND,((USER-AGENT,bili*), (NOT,((DOMAIN-SUFFIX,bilibili.com))), (NOT,((DOMAIN-SUFFIX,hdslb.com)))),REJECT-TINYGIF
