@@ -1,0 +1,76 @@
+#!name=Surge Header
+#!desc=关于surge的个性化设置
+#!system=ios
+[General]
+#实验性功能
+tls-provider = openssl
+
+#日志等级
+loglevel = notify
+
+#跳过代理
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 17.0.0.0/8, localhost, *.local, *.crashlytics.com
+
+#VIF  Routes
+tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
+tun-included-routes = 192.168.1.12/32
+
+#监听
+http-listen = 0.0.0.0:8888
+socks5-listen = 0.0.0.0:8889
+
+#外部控制器
+external-controller-access = lhie1@0.0.0.0:6170
+
+#网络测试
+internet-test-url = http://www.aliyun.com
+
+#代理测试
+proxy-test-url = http://www.gstatic.com/generate_204
+
+#测速延时
+test-timeout = 3
+
+#ipv6支持
+ipv6 = false
+
+#错误警告显示
+show-error-page-for-reject = true
+
+# DNS
+dns-server = 119.29.29.29, 119.28.28.28, 1.2.4.8,system
+
+#always ip
+always-real-ip = *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com
+
+#运营商劫持
+hijack-dns = 8.8.8.8:53, 8.8.4.4:53
+
+# Advanced
+exclude-simple-hostnames = true
+
+#公共Wi-Fi下的默认策略启用
+use-default-policy-if-wifi-not-primary = false
+
+#Wi-Fi访问
+allow-wifi-access = false
+
+#规则均衡模式
+enhanced-mode-by-rule = false
+
+#Network.framework
+network-framework = false
+
+[Replica]
+#隐藏Apple请求
+hide-apple-request = true
+
+#隐藏 Crashlytics 请求
+hide-crashlytics-request = true
+
+#隐藏udp会话
+hide-udp = false
+
+#关键词过滤
+keyword-filter-type = (null)
+keyword-filter = icloud,ocsp,logs,analytic,ads,imap,adthor,applovin,appnext,talk,dropbox,spys
