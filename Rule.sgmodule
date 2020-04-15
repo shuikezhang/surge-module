@@ -1,9 +1,9 @@
 #!name=Rule
 #!desc=分流规则和去广告
 #!system=ios
-[RULE]
+[Rule]
 #今日热榜
-DOMAIN-SUFFIX,tophub.today,direct
+DOMAIN-SUFFIX,tophub.today,DIRECT
 
 # ZhiHu
 USER-AGENT,AVOS*,REJECT-TINYGIF
@@ -17,13 +17,14 @@ URL-REGEX,https://api.bilibili.com/x/v2/dm/advert,REJECT-TINYGIF
 AND,((USER-AGENT,bili*), (NOT,((DOMAIN-SUFFIX,bilibili.com))), (NOT,((DOMAIN-SUFFIX,hdslb.com)))),REJECT-TINYGIF
 
 # IP去广告
-RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list,reject
+RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list,REJECT
 
 # 正则去广告
-RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Tide.list,reject
+RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Tide.list,REJECT
 
 # Advertising 广告（以及隐私追踪）
-RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Reject.list,reject
-RULE-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt,reject
+RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Reject.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt,REJECT
+
 #Antirevoke
-RULE-SET,https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Surge/Ruleset/Antirevoke.list,reject
+RULE-SET,https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Surge/Ruleset/Antirevoke.list,REJECT
