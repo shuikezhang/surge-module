@@ -17,14 +17,13 @@ URL-REGEX,https://api.bilibili.com/x/v2/dm/advert,REJECT-TINYGIF
 AND,((USER-AGENT,bili*), (NOT,((DOMAIN-SUFFIX,bilibili.com))), (NOT,((DOMAIN-SUFFIX,hdslb.com)))),REJECT-TINYGIF
 
 # IP去广告
-RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list,reject
 
 # 正则去广告
-RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Tide.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Tide.list,reject
 
 # Advertising 广告（以及隐私追踪）
-RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Reject.list,REJECT
-
-RULE-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt,REJECT
+RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Reject.list,reject
+RULE-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt,reject
 #Antirevoke
-RULE-SET,https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Surge/Ruleset/Antirevoke.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Surge/Ruleset/Antirevoke.list,reject
