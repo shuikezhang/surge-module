@@ -3,7 +3,7 @@
 #!system=ios
 [RULE]
 #今日热榜
-DOMAIN-SUFFIX,tophub.today,DIRECT
+DOMAIN-SUFFIX,tophub.today,direct
 
 # ZhiHu
 USER-AGENT,AVOS*,REJECT-TINYGIF
