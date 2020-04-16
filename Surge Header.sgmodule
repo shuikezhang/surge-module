@@ -1,4 +1,4 @@
-#!name=Surge Header
+#!name=Surge Head
 #!desc=关于surge的个性化设置
 #!system=ios
 [General]
@@ -26,10 +26,10 @@ external-controller-access = lhie1@0.0.0.0:6170
 internet-test-url = http://www.aliyun.com
 
 #代理测试
-proxy-test-url = http://www.gstatic.com/generate_204
+proxy-test-url = http://cp.cloudflare.com/generate_204
 
 #测速延时
-test-timeout = 3
+test-timeout = 5
 
 #ipv6支持
 ipv6 = false
