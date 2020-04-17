@@ -2,6 +2,9 @@
 #!desc=分流规则和去广告
 #!system=ios
 [Rule]
+#解决京东比价冲突
+DOMAIN-SUFFIX, cc.m.jd.com,DIRECT
+
 #今日热榜
 DOMAIN-SUFFIX,tophub.today,DIRECT
 
