@@ -3,7 +3,7 @@
 #!system=ios
 [Rule]
 #解决京东比价冲突
-DOMAIN-SUFFIX, cc.m.jd.com,DIRECT
+DOMAIN-SUFFIX,m.jd.com,DIRECT
 
 #今日热榜
 DOMAIN-SUFFIX,tophub.today,DIRECT
