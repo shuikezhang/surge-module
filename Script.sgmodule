@@ -29,7 +29,7 @@ surge%20zhihu%20answer.js = requires-body=1,max-size=0,script-path=https://raw.g
 surge%20zhihu%20people.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20zhihu%20people.js,type=http-response,pattern=https://api.zhihu.com/people/
 # > 哔哩哔哩 精简&去广告
 # 首页Tab
-surge%20bilibili%20tab.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20tab.js,type=http-response,pattern=https://app.bilibili.com/x/resource/show/tab\?access_key
+#surge%20bilibili%20tab.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20tab.js,type=http-response,pattern=https://app.bilibili.com/x/resource/show/tab\?access_key
 surge%20bilibili%20feed.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20feed.js,type=http-response,pattern=https://app.bilibili.com/x/v2/feed/index\?access_key
 # 个人中心
 surge%20bilibili%20account.js = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/onewayticket255/Surge-Script/master/surge%20bilibili%20account.js,type=http-response,pattern=https://app.bilibili.com/x/v2/account/mine\?access_key
