@@ -23,9 +23,5 @@ RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Lib
 # 正则去广告
 RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Tide.list,REJECT
 
-# Advertising 广告（以及隐私追踪）
-RULE-SET,https://github.com/lhie1/Rules/raw/master/Surge/Surge%203/Provider/Reject.list,REJECT
-RULE-SET,https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-surge.txt,REJECT
-
 #Antirevoke
 RULE-SET,https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Surge/Ruleset/Antirevoke.list,REJECT
