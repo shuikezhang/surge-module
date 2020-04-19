@@ -27,10 +27,6 @@ bilibili签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts
 # 京东多合一签到
 京东多合一签到= type=cron,cronexp=cron 5 0 * * *, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
-# 工银e生活 (By @barrymchen)
-# App首页“欢趣签到”,手动签到1次
-工银e生活= type=cron,cronexp=15 5 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/icbc_sign.js,script-update-interval=0
-
 # 京东到家 (@barrymchen, @GideonSenku & @Macsuny)
 # APP登陆账号后，点击主页’签到‘,即可
 京东到家 = type=cron,cronexp=25 5 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jddj.js,script-update-interval=0
@@ -42,7 +38,3 @@ bilibili签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts
 # 微信小程序-活动抽奖 (By @makexp & @zZPiglet)
 #打开微信小程序 进入“活动抽奖”，手动签到一次或点击“已签到”
 微信小程序-活动抽奖 = type=cron,cronexp=0 6 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/WeChatLottery_new.js
-
-# 微信小程序-喜马拉雅 (By @makexp)
-# 微信小程序 - 喜马拉雅 - 我的： 签到 “ 获取 Cookie
-微信小程序-喜马拉雅 = type=cron,cronexp=5 6 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/xmly_wc.js
