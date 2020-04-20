@@ -1,5 +1,5 @@
 #!name=Surge Head
-#!desc=关于surge的个性化设置
+#!desc=surge的个性化设置
 #!system=ios
 [General]
 #实验性功能
@@ -20,10 +20,10 @@ http-listen = 0.0.0.0:8888
 socks5-listen = 0.0.0.0:8889
 
 #外部控制器
-external-controller-access = lhie1@0.0.0.0:6170
+#external-controller-access =shuikezhang@0.0.0.0:6170
 
 #网络测试
-internet-test-url = http://www.aliyun.com
+internet-test-url = http://www.bing.com
 
 #代理测试
 proxy-test-url = http://cp.cloudflare.com/generate_204
