@@ -24,4 +24,4 @@ RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Lib
 RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Tide.list,REJECT
 
 #Antirevoke
-RULE-SET,https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Surge/Ruleset/Antirevoke.list,REJECT
+RULE-SET,https://github.com/nzw9314/Surge/raw/master/Ruleset/Antirevoke.list,REJECT
