@@ -2,6 +2,7 @@
 #!desc=一些必要的rewrite&Host
 #!system=ios
 [Host]
+iosapps.itunes.apple.com = script:dnspod
 *.taobao.com = server:223.5.5.5
 *.tmall.com = server:223.5.5.5
 *.taobao.com = server:223.6.6.6
