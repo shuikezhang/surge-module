@@ -78,3 +78,6 @@ bilibili签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts
 #2.打开微博钱包点击签到，获取Cookie，
 #3.钱包已经签到无法获取
 微博(钱包) = type=cron,cronexp=35 0 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js,script-update-interval=0
+
+# 打开 APP, 访问下`个人中心`
+飞客茶馆 = type=cron,cronexp=55 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.js,script-update-interval=0
