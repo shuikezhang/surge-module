@@ -84,3 +84,5 @@ bilibili签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts
 
 # 打开 APP, 访问下`个人中心`
 飞客茶馆 = type=cron,cronexp=55 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.js,wake-system=true
+
+中青看点 = type=cron,cronexp=*/30 3-6 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js,script-update-interval=0
