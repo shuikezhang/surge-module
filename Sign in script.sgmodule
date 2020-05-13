@@ -86,4 +86,4 @@ bilibili签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts
 飞客茶馆 = type=cron,cronexp=55 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.js,wake-system=true
 
 # > 中青看点极速版
-中青看点𝙏𝙖𝙨𝙠 = type=cron,cronexp=”*/30 * 1-3 * * *“,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js,wake-system=true,script-update-interval=0
+#中青看点𝙏𝙖𝙨𝙠 = type=cron,cronexp=”*/30 * 1-3 * * *“,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js,wake-system=true,script-update-interval=0
