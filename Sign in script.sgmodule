@@ -88,7 +88,7 @@ bilibili签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts
 # > 中青看点极速版
 中青看点𝙏𝙖𝙨𝙠 = type=cron,cronexp=*/5 */2 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js,wake-system=true,script-update-interval=0
 
-#腾讯新闻 = type=cron,cronexp=0 */1 * * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews2.js,script-update-interval=0,wake-system=true
+腾讯新闻 = type=cron,cronexp=0 */1 * * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews2.js,script-update-interval=0,wake-system=true
 
 
 
