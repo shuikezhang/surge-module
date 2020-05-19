@@ -8,9 +8,6 @@ tls-provider = openssl
 #日志等级
 loglevel = notify
 
-#脚本休眠唤醒
-wake-system=true
-
 #跳过代理
 skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 17.0.0.0/8, localhost, *.local, *.crashlytics.com
 
@@ -76,5 +73,7 @@ hide-crashlytics-request = true
 hide-udp = false
 
 #关键词过滤
-keyword-filter-type = (null)
-keyword-filter = icloud,ocsp,logs,analytic,ads,imap,adthor,applovin,appnext,talk,dropbox,spys
+keyword-filter-type = pattern
+keyword-filter = icloud,ocsp,logs,analytic,ads,imap,adthor,applovin,appnext,talk,dropbox,-*biliapi*, -pingma.qq.com:443,-*3g.qq.com:443,-ios.bugly.qq.com:443, -iadsdk.apple.com:443,-www.googleadservices.com:443 , -adash*, -*umeng*,-*aoovqo8t*, -*clientlog*, -app-measurement.com:443 ,-in.appcenter.ms:443, *
+
+

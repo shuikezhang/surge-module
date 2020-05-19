@@ -95,7 +95,3 @@ RULE-SET,https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Tid
 #Antirevoke
 RULE-SET,https://github.com/nzw9314/Surge/raw/master/Ruleset/Antirevoke.list,REJECT
 
-[Replica]
-keyword-filter = -*biliapi*, -pingma.qq.com:443,-*3g.qq.com:443,-ios.bugly.qq.com:443, -iadsdk.apple.com:443,-www.googleadservices.com:443 , -adash*, -*umeng*,-*aoovqo8t*, -*clientlog*, -app-measurement.com:443 ,-in.appcenter.ms:443, *
-keyword-filter-type = pattern
-
