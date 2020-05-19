@@ -4,10 +4,10 @@
 
 [Script]
 # 联通签到
-联通签到 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js,script-update-interval=0,type=cron,cronexp=45 07 0 * * *,wake-system=true
+#联通签到 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.js,script-update-interval=0,type=cron,cronexp=45 07 0 * * *,wake-system=true
 
 # 什么值得买签到
-什么值得买签到 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js,script-update-interval=0,type=cron,cronexp=25 05 0 * * *,wake-system=true
+#什么值得买签到 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/smzdm/smzdm.js,script-update-interval=0,type=cron,cronexp=25 05 0 * * *,wake-system=true
 
 # 腾讯视频签到
 腾讯视频签到 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js,script-update-interval=0,type=cron,cronexp=15 06 0 * * *,wake-system=true
@@ -16,36 +16,36 @@
 人人影视签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js,script-update-interval=0,type=cron,cronexp=10 50 23 * * *,wake-system=true
 
 # 网易云音乐签到
-网易云音乐签到 = timeout=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js,script-update-interval=0,type=cron,cronexp=50 04 0 * * *,wake-system=true
+#网易云音乐签到 = timeout=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js,script-update-interval=0,type=cron,cronexp=50 04 0 * * *,wake-system=true
 
 # bilibili签到
-bilibili签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0,type=cron,cronexp=13 03 0 * * *,wake-system=true
+#bilibili签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js,script-update-interval=0,type=cron,cronexp=13 03 0 * * *,wake-system=true
 
 # 电信签到
-电信签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js,script-update-interval=0,type=cron,cronexp=10 34 3 * * *,wake-system=true
+#电信签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.js,script-update-interval=0,type=cron,cronexp=10 34 3 * * *,wake-system=true
 
 # 京东多合一签到
 京东多合一签到= type=cron,cronexp=10 0 0 * * *, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,wake-system=true
 
 # 京东到家 (@barrymchen, @GideonSenku & @Macsuny)
 # APP登陆账号后，点击主页’签到‘,即可
-京东到家 = type=cron,cronexp=25 5 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jddj.js,script-update-interval=0,wake-system=true
+#京东到家 = type=cron,cronexp=25 5 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/jddj.js,script-update-interval=0,wake-system=true
 
 # 微信小程序-来客有礼 (By @Macsuny)
 # 微信搜索’来客有礼‘小程序,登陆京东账号，点击’领京豆->翻牌‘
  微信小程序-来客有礼= type=cron,cronexp=30 5 0 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/lkyl.js,script-update-interval=0,wake-system=true
 # 微信小程序-活动抽奖 (By @makexp & @zZPiglet)
 #打开微信小程序 进入“活动抽奖”，手动签到一次或点击“已签到”
-微信小程序-活动抽奖 = type=cron,cronexp=0 30 20 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/WeChatLottery_new.js,wake-system=true
-电信套餐余量查询= type=cron,cronexp=50 4 7 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/telecomInfinity.js,script-update-interval=0,wake-system=true
+#微信小程序-活动抽奖 = type=cron,cronexp=0 30 20 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/WeChatLottery_new.js,wake-system=true
+#电信套餐余量查询= type=cron,cronexp=50 4 7 * * *,script-path=https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task/telecomInfinity.js,script-update-interval=0,wake-system=true
 
 # 顺丰速运
 # 打开 APP, 访问下`我的顺丰` > `去签到` (访问下`去签到`的页面即可, 不用点`签到`)
 # 打开 APP或小程序, 访问下`27周年庆`
-顺丰速运= type=cron,cronexp=20 1 6 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0,wake-system=true
+#顺丰速运= type=cron,cronexp=20 1 6 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0,wake-system=true
 # 海底捞
 # 打开APP 然后手动签到 1 次
-海底捞 = type=cron,cronexp=25 3 4 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/haidilao/hdl.js,script-update-interval=0,wake-system=true
+#海底捞 = type=cron,cronexp=25 3 4 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/haidilao/hdl.js,script-update-interval=0,wake-system=true
 
 # > 爱奇艺
 爱奇艺= type=cron,cronexp=15 12 2 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0,wake-system=true
@@ -54,13 +54,13 @@ bilibili签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts
 # 打开 APP 进入签到:  `右上角` > `签到`
 # 阅读篇数获取Cookie:`小视频`中播放一段时间视频即可获取,具体的阅读篇数奖励请到应用内手动点击
 # 首页金币奖励:此Cookie在首页的推荐中随机出现,随机获取,并不一定会出现。
-趣头条 = type=cron,cronexp=04 */60 * * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.js,script-update-interval=0,wake-system=true
+#趣头条 = type=cron,cronexp=04 */60 * * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.js,script-update-interval=0,wake-system=true
 
 # 米读
 # 打开 APP 进入`我的` -> `疯狂摇摇乐`,系统提示: `签到:获取Cookie: 成功`
 # 阅读时长获取Cookie:打开 APP 选取文章阅读， `书城` > `任意文章阅读` 等到提示获取Cookie成功即可
-米读签到 = type=cron,cronexp=10 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduSign.js,script-update-interval=0,wake-system=true
-米读阅读 = type=cron,cronexp=*/30 * * * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduRead.js,script-update-interval=0,wake-system=true
+#米读签到 = type=cron,cronexp=10 1 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduSign.js,script-update-interval=0,wake-system=true
+#米读阅读 = type=cron,cronexp=*/30 * * * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/midu/miduRead.js,script-update-interval=0,wake-system=true
 
 # 苏宁易购
 # 首页 > 签到有礼
@@ -70,25 +70,25 @@ bilibili签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts
 
 # 芒果TV
 # 打开 APP 然后手动签到 1 次
-芒果TV = type=cron,cronexp=10 2 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.js,script-update-interval=0,wake-system=true
+#芒果TV = type=cron,cronexp=10 2 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.js,script-update-interval=0,wake-system=true
 
 # 樊登读书
 # 打开 APP 手动签到一次: 访问下右下角 `我的` > `签到`
-樊登读书 = type=cron,cronexp=5 3 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/fandeng/fandeng.js,script-update-interval=0,wake-system=true
+#樊登读书 = type=cron,cronexp=5 3 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/fandeng/fandeng.js,script-update-interval=0,wake-system=true
 
 # > 微博 & 微博钱包 (By @Macsuny)
 #1.打开微博App获取Cookie.获取后请注释或禁用Cookie
 #2.打开微博钱包点击签到，获取Cookie，
 #3.钱包已经签到无法获取
-微博(钱包) = type=cron,cronexp=35 0 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js,script-update-interval=0,wake-system=true
+#微博(钱包) = type=cron,cronexp=35 0 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/weibo.js,script-update-interval=0,wake-system=true
 
 # 打开 APP, 访问下`个人中心`
 飞客茶馆 = type=cron,cronexp=55 0 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/flyertea/flyertea.js,wake-system=true
 
 # > 中青看点极速版
-中青看点𝙏𝙖𝙨𝙠 = type=cron,cronexp=*/5 */2 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js,wake-system=true,script-update-interval=0
+#中青看点𝙏𝙖𝙨𝙠 = type=cron,cronexp=*/5 */2 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js,wake-system=true,script-update-interval=0
 
-腾讯新闻 = type=cron,cronexp=04 */10 * * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews2.js,script-update-interval=0,wake-system=true
+#腾讯新闻 = type=cron,cronexp=04 */10 * * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews2.js,script-update-interval=0,wake-system=true
 
 
 
