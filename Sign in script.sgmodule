@@ -28,12 +28,6 @@ bilibili签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts
 # > 爱奇艺
 爱奇艺= type=cron,cronexp=15 12 2 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0,wake-system=true
 
-# 苏宁易购
-# 首页 > 签到有礼
-# 首页 > 领取红包
-# 首页  > 天天低价
-苏宁易购 = type=cron,cronexp=50 3 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/suning/suning.js,script-update-interval=0,wake-system=true
-
 # 芒果TV
 # 打开 APP 然后手动签到 1 次
 芒果TV = type=cron,cronexp=10 2 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.js,script-update-interval=0,wake-system=true
@@ -42,5 +36,28 @@ bilibili签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts
 wanda-签到 = type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wanda/wanda.js,wake-system=true
 
 #欧科林
-cron ”1 7 * * *“ script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Oclean/Oclean.js
+Oclean_mini.js = script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Oclean/Oclean_mini.js,type=cron,cronexp=1 7 * * *
+Oclean_mini.js = script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Oclean/Oclean_mini.js,type=http-request,pattern=^https:\/\/mall\.oclean\.com\/API\/VshopProcess\.ashx\?action=TaskHome&clientType=5&client=5&openId=
+
+# 京东系列薅羊毛
+cron "5 6-18/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_fruit.js,timeout=30,  tag=东东农场
+cron "10 7-19/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_pet.js,timeout=30, tag=东东萌宠
+cron "1 7-21/2 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_plantBean.js,timeout=30, tag=京东种豆得豆
+cron "15 */2 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy.js,timeout=30, tag=宠汪汪
+cron "12 */1 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_feedPets.js,timeout=30, tag=宠汪汪喂食
+cron "0 0,6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_steal.js,timeout=30, tag=宠汪汪偷好友积分与狗粮
+cron "1 0,8,12,16 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_reward.js,timeout=30, tag=宠汪汪积分兑换奖品
+cron "8 */3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_speed.js,timeout=30, tag=京东天天加速
+cron "3 */3 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_moneyTree.js,timeout=30, tag=京东摇钱树
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_club_lottery.js,tag=摇京豆
+cron "11 1-23/5 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_superMarket.js,timeout=30, tag=京小超
+cron "20 5 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_blueCoin.js,timeout=30, tag=京小超领蓝币(兑换京豆)
+cron "55 23 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_unsubscribe.js,timeout=30, tag=取关京东店铺商品
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_shop.js,timeout=30, tag=进店领豆
+cron "1 0-18/6 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_818.js, timeout=30, tag=京东手机狂欢城
+cron "15 10 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_joy_run.js, timeout=30, tag=宠汪汪邀请助力与赛跑助力
+cron "1 1 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_redPacket.js, tag=京东全民开红包
+cron "0 9 * * *" script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_baiTiao.js, tag=京东白条
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_xtg.js, tag=星推
+cron "20 * * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_collectProduceScore.js, tag=京东全民营业领金币
 
