@@ -3,6 +3,11 @@
 #!system=ios
 
 [Script]
+#饿了么打卡领红包
+cron "0 9 8 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/elem/elemCheckIn.js, tag=饿了么-打卡领红包
+
+#奈雪
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Naixue/Naixue.js, tag=奈雪
 
 # 腾讯视频签到
 腾讯视频签到 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js,script-update-interval=0,type=cron,cronexp=15 16 0 * * *,wake-system=true
@@ -16,36 +21,32 @@ bilibili签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts
 # 京东多合一签到
 京东多合一签到= type=cron,cronexp=10 01 0 * * *, script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js,wake-system=true
 
-# 顺丰速运
-# 打开 APP, 访问下`我的顺丰` > `去签到` (访问下`去签到`的页面即可, 不用点`签到`)
-# 打开 APP或小程序, 访问下`27周年庆`
-#顺丰速运= type=cron,cronexp=20 1 6 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0,wake-system=true
 
 # 海底捞
-# 打开APP 然后手动签到 1 次
 海底捞 = type=cron,cronexp=25 3 4 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/haidilao/hdl.js,script-update-interval=0,wake-system=true
 
 # > 爱奇艺
 爱奇艺= type=cron,cronexp=15 12 2 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js,script-update-interval=0,wake-system=true
 
 # 芒果TV
-# 打开 APP 然后手动签到 1 次
 芒果TV = type=cron,cronexp=10 2 10 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/mgtv/mgtv.js,script-update-interval=0,wake-system=true
 
 #万达影城
 #wanda-签到 = type=cron,cronexp=10 03 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/wanda/wanda.js,wake-system=true
 
 #欧科林
-Oclean_mini.js = script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Oclean/Oclean_mini.js,type=cron,cronexp=1 7 * * *
-Oclean_mini.js = script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Oclean/Oclean_mini.js,type=http-request,pattern=^https:\/\/mall\.oclean\.com\/API\/VshopProcess\.ashx\?action=TaskHome&clientType=5&client=5&openId=
+cron "0 0 10,21 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Oclean/Oclean.js, tag=欧可林
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Oclean/Oclean_mini.js, tag=欧可林商城
 
+#吾爱破解签到
 吾爱签到 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 
+#微信来客有礼
 来客有礼 = type=cron,cronexp=35 5 0 * * *,script-path=https://raw.githubusercontent.com/Sunert/Scripts/master/Task/lkyl.js,script-update-interval=0
+
+#机场签到
+cron "0 5 8 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/glados/checkincookie_env.js, tag=机场签到Cookie版
 
 #什么值得买
 什么值得买_每日签到 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,timeout=120,type=cron,cronexp=5 0 * * *
-什么值得买_获取cookie = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,type=http-request,requires-body=true,pattern=^https?:\/\/zhiyou\.smzdm\.com\/user$
-什么值得买_获取账号密码 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_checkin.js,type=http-request,requires-body=true,pattern=^https?:\/\/user-api\.smzdm\.com\/user_login\/normal$
 
-hostname = %APPEND% zhiyou.smzdm.com, user-api.smzdm.com
