@@ -33,7 +33,7 @@ bilibili签到= script-path=https://raw.githubusercontent.com/chavyleung/scripts
 
 
 #欧科林
-cron "0 0 10,21 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Oclean/Oclean.js, tag=欧可林
+cron "0 8 0 * * *" script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Oclean/Oclean.js, tag=欧可林
 
 #吾爱破解签到
 吾爱签到 = type=cron,cronexp=0 9 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
