@@ -5,7 +5,7 @@
 hostname=%APPEND% raw.githubusercontent.com, gist.githubusercontent.com
 
 [URL Rewrite]
-^(https?:\/\/(?:raw|gist)\.githubusercontent\.com\/.+)$ https://raw.sevencdn.com/$1 302
+^(https?:\/\/(?:raw|gist)\.githubusercontent\.com\/.+)$ raw.sevencdn.com/$1 302
 
 [Rule]
 DOMAIN,raw.sevencdn.com,DIRECT
