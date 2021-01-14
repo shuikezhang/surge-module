@@ -66,9 +66,8 @@ cron "20 12 * * 6" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/j
 #疯狂的joy日常任务
 cron "30 8 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_crazy_joy.js, timeout=1750, wake-system=1, tag=疯狂的joy日常任务
 #签到领现金
-签到领现金 = type=cron,cronexp="0 0 * * *",wake-system=1,timeout=2220,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_cash.js
-
-京喜签到 = type=cron,cronexp="6 0 * * *",wake-system=1,timeout=20,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jx_sign.js
+cron "0 0 * * *",script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_cash.js,timeout=2220,wake-system=1,Ttag=签到领现金
+cron "6 0 * * *",script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jx_sign.js,timeout=20,wake-system=1,tag=京喜签到
 
 口袋书店 = type=cron,cronexp="1 8,12,18 * * *",wake-system=1,timeout=20,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_bookshop.js
 
