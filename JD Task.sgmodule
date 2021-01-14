@@ -53,6 +53,8 @@ cron "30 10 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/j
 cron "0 10 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_car.js, timeout=750, wake-system=1, tag=京东汽车
 #京东汽车积分兑换京豆
 cron "0 0 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_car_exchange.js, timeout=2750, wake-system=1, tag=京东汽车积分兑换京豆
+cron "0 1 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_car_exchange.js, timeout=2750, wake-system=1, tag=京东汽车积分兑换京豆
+cron "0 2 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_car_exchange.js, timeout=2750, wake-system=1, tag=京东汽车积分兑换京豆
 #京东快递签到
 cron "20 11 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_kd.js, timeout=750, wake-system=1, tag=京东快递签到
 #京东直播(活动结束时间未知)
@@ -71,3 +73,15 @@ cron "30 8 * * *" script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd
 口袋书店 = type=cron,cronexp="1 8,12,18 * * *",wake-system=1,timeout=20,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_bookshop.js
 
 crazyJoy挂机 = type=cron,cronexp="10 * * * *",wake-system=1,timeout=20,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_crazy_joy_coin.js
+
+宠汪汪强制为别人助力= type=http-request,pattern= ^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/pet\/enterRoom\/h5\?reqSource=weapp&invitePin=.*+(&inviteSource=task_invite&shareSource=\w+&inviteTimeStamp=\d+&openId=\w+)?|^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/pet\/helpFriend\?friendPin,requires-body=1,max-size=0,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_help.js
+
+聚宝盆投狗粮辅助 = type=http-response,pattern=^https:\/\/jdjoy\.jd\.com\/pet\/getPetTreasureBox|^https:\/\/draw\.jdfcloud\.com\/\/pet\/getPetTreasureBox,requires-body=1,max-size=0,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_petTreasureBox.js
+
+京喜农场 = type=cron,cronexp="0 9,12,18 * * *",timeout=60,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_jxnc.js
+
+京东抽奖机 = type=cron,cronexp=11 1 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_lotteryMachine.js
+
+京东排行榜 = type=cron,cronexp=11 9 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_rankingList.js
+
+京东全民开红包 = type=cron,cronexp=1 1 * * *,wake-system=1,timeout=20,script-path=https://gitee.com/lxk0301/jd_scripts/raw/master/jd_redPacket.js
