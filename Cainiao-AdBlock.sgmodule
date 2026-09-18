@@ -1,0 +1,36 @@
+#!name=菜鸟 App 去广告（抓包定制）
+#!desc=基于菜鸟 8.11.910 iOS 抓包，拦截腾讯优量汇、穿山甲、Tanx、1RTB、Ubix 等第三方广告请求；不拦截菜鸟物流业务接口。
+#!author=Minis
+#!system=ios
+
+[Rule]
+# 腾讯优量汇 / GDT
+DOMAIN,mi.gdt.qq.com,REJECT
+DOMAIN,v2mi.gdt.qq.com,REJECT
+DOMAIN,sdk.e.qq.com,REJECT
+DOMAIN,sdkquic.e.qq.com,REJECT
+DOMAIN,ipv4.gdt.qq.com,REJECT
+DOMAIN,win.gdt.qq.com,REJECT
+DOMAIN,pgdt.ugdtimg.com,REJECT
+
+# 字节穿山甲 / Pangle
+DOMAIN,api-access.pangolin-sdk-toutiao.com,REJECT
+DOMAIN,api-access.pangolin-sdk-toutiao1.com,REJECT
+DOMAIN,api-access.pangolin-sdk-toutiao-b.com,REJECT
+DOMAIN,log-api.pangolin-sdk-toutiao-b.com,REJECT
+DOMAIN,toblog.ctobsnssdk.com,REJECT
+DOMAIN,tnc3-alisc1.zijieapi.com,REJECT
+DOMAIN,sf3-fe-tos.pglstatp-toutiao.com,REJECT
+DOMAIN,sf6-fe-tos.pglstatp-toutiao.com,REJECT
+
+# 1RTB / Ubix 广告聚合
+DOMAIN,sdk.1rtb.net,REJECT
+DOMAIN,adx-cfg-u1.ubixioe.com,REJECT
+DOMAIN,adx-data-u1.ubixioe.com,REJECT
+DOMAIN,entry-su1.ubixioe.com,REJECT
+
+# 阿里 Tanx 与广告监测
+DOMAIN,df.tanx.com,REJECT
+DOMAIN,bdlog.tanx.com,REJECT
+DOMAIN,ipm.atm.youku.com,REJECT
+DOMAIN,admonitor-feedback.cn-hangzhou.log.aliyuncs.com,REJECT
