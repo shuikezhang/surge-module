@@ -43,14 +43,10 @@ DOMAIN,ipm.atm.youku.com,REJECT
 DOMAIN,admonitor-feedback.cn-hangzhou.log.aliyuncs.com,REJECT
 DOMAIN,nbnest-admonitor.cainiao.com,REJECT
 
-[URL Rewrite]
-# 菜鸟原生广告、商品推广和底部角标
-^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(?!.*_home) - reject-200
-^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow\.cn - reject-200
-^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.nbcps\.presentation\.fetch\.cn - reject-200
-^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.app\.home\.v\d+\.bottom\.area - reject-200
-
 [Script]
+# 菜鸟原生广告、商品推广和底部角标：直接返回空数据。
+cainiao-native-ads = type=http-request, pattern=^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.(?:guoguo\.nbnetflow\.ads\.|nbcps\.presentation\.fetch\.cn|app\.home\.v\d+\.bottom\.area), script-path=https://raw.githubusercontent.com/shuikezhang/surge-module/minis/cainiao-adblock-20260918/cainiao-block.js
+
 # 菜鸟会通过 AMDC 将接口调度到裸 IP；先阻断调度，才能让 MITM/响应脚本命中域名请求。
 cainiao-amdc = type=http-response, pattern=^http:\/\/(?:amdc\.m\.taobao\.com|59\.82\.(?:14\.1|34\.(?:147|148)))\/amdc\/mobileDispatch, script-path=https://raw.githubusercontent.com/shuikezhang/surge-module/minis/cainiao-adblock-20260918/cainiao-amdc.js, requires-body=true, max-size=0
 # “我的”页面：钱包、热门活动、会员及运营卡片
