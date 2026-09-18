@@ -1,5 +1,5 @@
-#!name=菜鸟 App 去广告（抓包定制）
-#!desc=基于菜鸟 8.11.910 iOS 抓包，拦截腾讯优量汇、穿山甲、Tanx、1RTB、Ubix 等第三方广告请求；不拦截菜鸟物流业务接口。
+#!name=菜鸟 App 深度去广告
+#!desc=菜鸟 8.11.910 深度净化：拦截第三方广告，并改写菜鸟页面响应以移除“我的”热门活动和首页推广。首次使用须开启 MITM，并建议卸载重装菜鸟。
 #!author=Minis
 #!system=ios
 
@@ -29,17 +29,13 @@ DOMAIN,sf3-fe-tos.pglstatp-toutiao.com,REJECT
 DOMAIN,sf6-fe-tos.pglstatp-toutiao.com,REJECT
 DOMAIN,v5-ex-be-pack.pglstatp-toutiao.com,REJECT
 
-# 快手及其他广告素材
+# 快手、1RTB、Ubix、Tanx 与广告监测
 DOMAIN,p66-ad.adkwai.com,REJECT
 DOMAIN,v66-ad.ndcjl.com,REJECT
-
-# 1RTB / Ubix 广告聚合
 DOMAIN,sdk.1rtb.net,REJECT
 DOMAIN,adx-cfg-u1.ubixioe.com,REJECT
 DOMAIN,adx-data-u1.ubixioe.com,REJECT
 DOMAIN,entry-su1.ubixioe.com,REJECT
-
-# 阿里 Tanx 与广告监测
 DOMAIN,df.tanx.com,REJECT
 DOMAIN,bdlog.tanx.com,REJECT
 DOMAIN,rdstat.tanx.com,REJECT
@@ -47,5 +43,20 @@ DOMAIN,ipm.atm.youku.com,REJECT
 DOMAIN,admonitor-feedback.cn-hangzhou.log.aliyuncs.com,REJECT
 DOMAIN,nbnest-admonitor.cainiao.com,REJECT
 
-# 菜鸟自营活动中心（热门活动、红包等）
-DOMAIN,cnactivitycenter-mtop.cainiao.com,REJECT
+[URL Rewrite]
+# 菜鸟原生广告、商品推广和底部角标
+^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(?!.*_home) - reject-200
+^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow\.cn - reject-200
+^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.nbcps\.presentation\.fetch\.cn - reject-200
+^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.app\.home\.v\d+\.bottom\.area - reject-200
+
+[Script]
+# “我的”页面：钱包、热门活动、会员及运营卡片
+cainiao-my-page = type=http-response, pattern=^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.app\.e2e\.engine\.page\.fetch, script-path=https://raw.githubusercontent.com/shuikezhang/surge-module/minis/cainiao-adblock-20260918/cainiao-clean.js, requires-body=true, max-size=0
+# 首页运营推广
+cainiao-home-merge = type=http-response, pattern=^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.homepage\.merge\.get\.cn, script-path=https://raw.githubusercontent.com/shuikezhang/surge-module/minis/cainiao-adblock-20260918/cainiao-clean.js, requires-body=true, max-size=0
+cainiao-home-protocol = type=http-response, pattern=^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.protocol\.homepage\.get\.cn, script-path=https://raw.githubusercontent.com/shuikezhang/surge-module/minis/cainiao-adblock-20260918/cainiao-clean.js, requires-body=true, max-size=0
+cainiao-ad-keyword = type=http-response, pattern=^https?:\/\/[a-zA-Z0-9_.-]+\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword, script-path=https://raw.githubusercontent.com/shuikezhang/surge-module/minis/cainiao-adblock-20260918/cainiao-clean.js, requires-body=true, max-size=0
+
+[MITM]
+hostname = %APPEND% *.cainiao.com
