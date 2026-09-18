@@ -1,26 +1,26 @@
-/* 菜鸟信息流广告响应净化：保留正确响应结构，避免空白骨架占位。 */
+/* 菜鸟原生广告响应净化：按真实 HAR 结构清空广告位。 */
 try {
   const obj = JSON.parse($response.body || "{}");
   const url = $request.url;
+  const data = obj.data;
 
-  if (url.includes("guoguo.nbnetflow.ads.show.cn")) {
-    // 明确告诉客户端列表已加载但没有广告，而不是中断请求。
-    if (!obj.data || typeof obj.data !== "object") obj.data = {};
-    obj.data.result = [];
-  } else if (url.includes("guoguo.nbnetflow.ads.mshow.cn")) {
-    // 常见首页及“我的”横幅广告位。
-    ["205", "1275", "1308", "1316", "1332"].forEach(k => {
-      if (obj.data && Object.prototype.hasOwnProperty.call(obj.data, k)) delete obj.data[k];
-    });
-  } else if (url.includes("nbcps.presentation.fetch.cn")) {
-    if (!obj.data || typeof obj.data !== "object") obj.data = {};
-    obj.data.result = [];
-  } else if (/app\.home\.v\d+\.bottom\.area/.test(url)) {
+  if (url.includes("guoguo.nbnetflow.ads.batch.show.v2.cn") ||
+      url.includes("guoguo.nbnetflow.ads.mshow.cn")) {
+    // batch.show / mshow 的 data 是 {广告位ID: 广告数组}。
+    if (data && typeof data === "object" && !Array.isArray(data)) {
+      Object.keys(data).forEach(k => { data[k] = []; });
+    }
+  } else if (url.includes("guoguo.nbnetflow.ads.index.cn") ||
+             url.includes("guoguo.nbnetflow.ads.show.cn") ||
+             url.includes("nbcps.presentation.fetch.cn") ||
+             /app\.home\.v\d+\.bottom\.area/.test(url)) {
+    // index/show 等接口的广告列表位于 data.result。
     if (!obj.data || typeof obj.data !== "object") obj.data = {};
     obj.data.result = [];
   }
 
   $done({ body: JSON.stringify(obj) });
 } catch (e) {
+  console.log(`[菜鸟去广告] 响应处理失败: ${e}`);
   $done({ body: $response.body });
 }
